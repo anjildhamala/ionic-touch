@@ -4,7 +4,11 @@
   "description": "A Bridge between touch, storage and login across iOS and android",
   "private": true,
   "main": "index.ts",
-  "author": "ensocare-engineering",
+  "author": "Anjil Dhamala",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anjildhamala/ionic-touch.git"
+  },
   "dependencies": {
     "@ionic-native/android-fingerprint-auth": "^4.9.0",
     "@ionic-native/secure-storage": "^4.9.0",
