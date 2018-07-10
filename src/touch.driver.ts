@@ -11,7 +11,7 @@ import { Credentials } from "./interfaces/credentials.interface";
 
 @Injectable()
 export class TouchDriver {
-  isIOS: boolean;
+  private isIOS: boolean;
 
   constructor(private iosTouch: IosTouch, private androidTouch: AndroidTouch, platform: Platform, private storage: TouchSecureStorage) {
     this.isIOS = platform.is('ios');
