@@ -5,9 +5,6 @@
   "private": true,
   "main": "./src/index.ts",
   "author": "ensocare-engineering",
-  "scripts": {
-    "postinstall": "ngc"
-  },
   "devDependencies": {
     "@ionic-native/android-fingerprint-auth": "^4.9.0",
     "@ionic-native/secure-storage": "^4.9.0",
