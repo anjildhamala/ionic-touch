@@ -1,6 +1,6 @@
 {
   "name": "ionic-touch-module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Bridge between touch, storage and login across iOS and android",
   "private": false,
   "main": "index.ts",
