@@ -12,10 +12,10 @@ export class IosTouch implements DeviceInterface {
     return new Promise((resolve, reject) => {
       this.touchAuth.isAvailable()
           .then(() => {
-            resolve(TOUCH_CONSTANTS.touchAvailable)
+            resolve(TOUCH_CONSTANTS.touchAvailable);
           })
           .catch((error: any) => {
-            reject(error + ' ' + TOUCH_CONSTANTS.touchUnavailable)
+            reject(error + ' ' + TOUCH_CONSTANTS.touchUnavailable);
           });
     });
   }

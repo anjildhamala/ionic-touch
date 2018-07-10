@@ -23,7 +23,7 @@ export class AndroidTouch implements DeviceInterface {
             }
           })
           .catch(() => {
-            reject(TOUCH_CONSTANTS.touchUnavailable)
+            reject(TOUCH_CONSTANTS.touchUnavailable);
           });
     });
   }
