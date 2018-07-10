@@ -1,6 +1,6 @@
 Installation
 ```
-npm install https://github.com/anjildhamala/ionic-touch.git
+npm install ionic-touch-module
 ```
 
 Additional Installations
