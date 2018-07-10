@@ -1,9 +1,9 @@
 {
   "name": "ionic-touch-module",
   "version": "0.0.0",
-  "description": "Shared code base for app and site",
+  "description": "A Bridge between touch, storage and login across iOS and android",
   "private": true,
-  "main": "./src/index.ts",
+  "main": "index.ts",
   "author": "ensocare-engineering",
   "dependencies": {
     "@ionic-native/android-fingerprint-auth": "^4.9.0",

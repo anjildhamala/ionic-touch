@@ -16,13 +16,15 @@ export class AndroidTouch implements DeviceInterface {
     return new Promise((resolve, reject) => {
       this.fingerprintAuth.isAvailable()
           .then((response: AFAAvailableResponse) => {
+            console.log(response);
             if (response.isAvailable && response.hasEnrolledFingerprints && response.isHardwareDetected) {
               resolve(TOUCH_CONSTANTS.touchAvailable);
             } else if (!response.hasEnrolledFingerprints) {
               reject(TOUCH_CONSTANTS.noFingerprintsEnrolled);
             }
           })
-          .catch(() => {
+          .catch((error) => {
+            console.log(error, 'touch not available');
             reject(TOUCH_CONSTANTS.touchUnavailable);
           });
     });
