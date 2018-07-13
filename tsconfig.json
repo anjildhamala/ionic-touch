@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "declaration": false,
+    "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
@@ -11,11 +11,11 @@
     "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "outDir": "./dist"
   },
   "include": [
-    "src/**/*.ts",
-    "index.ts"
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules"
