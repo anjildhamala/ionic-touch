@@ -89,59 +89,57 @@ export class TouchDriver {
     switch (error) {
       case TOUCH_ANDROID_ERRORS.FINGERPRINT_ERROR.key:
         return {
-          status: 401, response: TOUCH_ANDROID_ERRORS.FINGERPRINT_ERROR.value
+          status: 0, response: TOUCH_ANDROID_ERRORS.FINGERPRINT_ERROR.value
         };
       case TOUCH_ANDROID_ERRORS.CANCELLED.key:
         return {
-          status: 400, response: TOUCH_ANDROID_ERRORS.CANCELLED.value
+          status: 1, response: TOUCH_ANDROID_ERRORS.CANCELLED.value
         };
       case TOUCH_ANDROID_ERRORS.NOT_AVAILABLE.key:
         return {
-          status: 204, response: TOUCH_ANDROID_ERRORS.NOT_AVAILABLE.value
+          status: 2, response: TOUCH_ANDROID_ERRORS.NOT_AVAILABLE.value
         };
       case TOUCH_ANDROID_ERRORS.PERMISSION_DENIED.key:
         return {
-          status: 401, response: TOUCH_ANDROID_ERRORS.PERMISSION_DENIED.value
+          status: 3, response: TOUCH_ANDROID_ERRORS.PERMISSION_DENIED.value
         };
       case TOUCH_ANDROID_ERRORS.UPDATE_SDK.key:
         return {
-          status: 304, response: TOUCH_ANDROID_ERRORS.UPDATE_SDK.value
+          status: 4, response: TOUCH_ANDROID_ERRORS.UPDATE_SDK.value
         };
       default:
         return {
-          status: 500, response: TOUCH_IOS_ERRORS.GENERIC.value
+          status: 5, response: TOUCH_IOS_ERRORS.GENERIC.value
         };
     }
   }
 
   private iosErrorHandler(error: {localizedDescription: string, code: number}): { status: number, response: string } {
-    console.log(error);
-    console.log(typeof error);
     switch (error.code) {
       case TOUCH_IOS_ERRORS.FINGERPRINT_ERROR.key:
         return {
-          status: 401, response: TOUCH_IOS_ERRORS.FINGERPRINT_ERROR.value
+          status: 0, response: TOUCH_IOS_ERRORS.FINGERPRINT_ERROR.value
         };
       case TOUCH_IOS_ERRORS.CANCELLED_PRIMARY.key:
       case TOUCH_IOS_ERRORS.CANCELLED_SECONDARY.key:
         return {
-          status: 400, response: TOUCH_IOS_ERRORS.CANCELLED_SECONDARY.value
-        };
-      case TOUCH_IOS_ERRORS.PERMISSION_DENIED.key:
-        return {
-          status: 503, response: TOUCH_IOS_ERRORS.PERMISSION_DENIED.value
+          status: 1, response: TOUCH_IOS_ERRORS.CANCELLED_SECONDARY.value
         };
       case TOUCH_IOS_ERRORS.NOT_AVAILABLE.key:
         return {
-          status: 404, response: TOUCH_IOS_ERRORS.NOT_AVAILABLE.value
+          status: 2, response: TOUCH_IOS_ERRORS.NOT_AVAILABLE.value
+        };
+      case TOUCH_IOS_ERRORS.PERMISSION_DENIED.key:
+        return {
+          status: 3, response: TOUCH_IOS_ERRORS.PERMISSION_DENIED.value
         };
       case TOUCH_IOS_ERRORS.TOUCH_LIMIT_REACHED.key:
         return {
-          status: 429, response: TOUCH_IOS_ERRORS.TOUCH_LIMIT_REACHED.value
+          status: 4, response: TOUCH_IOS_ERRORS.TOUCH_LIMIT_REACHED.value
         };
       default:
         return {
-          status: 500, response: TOUCH_IOS_ERRORS.GENERIC.value
+          status: 5, response: TOUCH_IOS_ERRORS.GENERIC.value
         };
     }
   }
