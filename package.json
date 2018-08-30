@@ -5,6 +5,9 @@
   "private": false,
   "main": "./src/index",
   "author": "Anjil Dhamala",
+  "scripts": {
+    "build": "tsc"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anjildhamala/ionic-touch.git"

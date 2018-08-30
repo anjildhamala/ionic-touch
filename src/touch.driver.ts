@@ -86,6 +86,7 @@ export class TouchDriver {
   }
 
   private androidErrorHandler(error: any): { status: number, response: string } {
+    console.log(error);
     switch (error) {
       case TOUCH_ANDROID_ERRORS.FINGERPRINT_ERROR.key:
         return {
@@ -109,7 +110,7 @@ export class TouchDriver {
         };
       default:
         return {
-          status: 5, response: TOUCH_IOS_ERRORS.GENERIC.value
+          status: 5, response: TOUCH_ANDROID_ERRORS.GENERIC.value
         };
     }
   }
