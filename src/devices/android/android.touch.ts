@@ -1,11 +1,12 @@
 import { Injectable } from "@angular/core";
 import {
-  AFAAvailableResponse, AFADecryptOptions,
+  AFAAvailableResponse,
+  AFADecryptOptions,
   AFAEncryptResponse,
   AndroidFingerprintAuth
 } from "@ionic-native/android-fingerprint-auth";
 import { DeviceInterface } from "../../interfaces/device.interface";
-import { TOUCH_CONSTANTS } from "../../constants/touch.constants";
+import { TOUCH_CONSTANTS, TOUCH_ERROR_RESPONSE } from "../../constants/touch.constants";
 
 @Injectable()
 export class AndroidTouch implements DeviceInterface {
@@ -19,11 +20,11 @@ export class AndroidTouch implements DeviceInterface {
             if (response.isAvailable && response.hasEnrolledFingerprints && response.isHardwareDetected) {
               resolve(TOUCH_CONSTANTS.touchAvailable);
             } else if (!response.hasEnrolledFingerprints) {
-              reject(TOUCH_CONSTANTS.noFingerprintsEnrolled);
+              reject(TOUCH_ERROR_RESPONSE.NO_ENROLLED_FINGERPRINTS);
             }
           })
           .catch(() => {
-            reject(TOUCH_CONSTANTS.touchUnavailable);
+            reject(TOUCH_ERROR_RESPONSE.TOUCH_UNAVAILABLE);
           });
     });
   }

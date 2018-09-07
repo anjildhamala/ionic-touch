@@ -3,7 +3,8 @@
   "version": "0.0.5",
   "description": "A Bridge between touch, storage and login across iOS and android",
   "private": false,
-  "main": "./src/index",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "author": "Anjil Dhamala",
   "scripts": {
     "build": "tsc"

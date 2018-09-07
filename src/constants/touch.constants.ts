@@ -62,8 +62,55 @@ export const TOUCH_ANDROID_ERRORS = {
     key: 'FINGERPRINT_ERROR',
     value: 'Fingerprint did not match.'
   },
+  NO_ENROLLED_FINGERPRINTS: {
+    key: 'noFingerprintsEnrolled',
+    value: 'No enrolled fingerprints found.'
+  },
+  FINGERPRINT_CHANGE: {
+    key: 'KeyPermanentlyInvalidatedException',
+    value: 'New Fingerprint found'
+  },
   GENERIC: {
     key: '',
     value: 'Something went wrong.'
+  }
+};
+
+export const TOUCH_ERROR_RESPONSE = {
+  TOUCH_READ_ERROR: {
+    status: 0,
+    value: 'Error reading fingerprint'
+  },
+  CANCELLED: {
+    status: 1,
+    value: 'Fingerprint was cancelled'
+  },
+  TOUCH_UNAVAILABLE: {
+    status: 2,
+    value: 'Touch is unavailable at this moment'
+  },
+  PERMISSION_DENIED: {
+    status: 3,
+    value: 'Touch permission was denied by the device'
+  },
+  TOUCH_OFF: {
+    status: 'TouchOff',
+    value: 'Touch Setting is turned off.'
+  },
+  GENERIC_ERROR_1: {
+    status: 4,
+    value: 'Something went wrong with touch login. Please try again later'
+  },
+  GENERIC_ERROR_2: {
+    status: 5,
+    value: 'Something went wrong with touch login. Please try again later'
+  },
+  FINGERPRINT_CHANGE: {
+    status: 6,
+    value: 'New Fingerprint found. Please log in again to enroll and start using fingerprint.'
+  },
+  NO_ENROLLED_FINGERPRINTS: {
+    status: 7,
+    value: 'There are no enrolled fingerprints. Fingerprint/Touch ID setting will be disabled.'
   }
 };
