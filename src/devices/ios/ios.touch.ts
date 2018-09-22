@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { TouchID } from "@ionic-native/touch-id";
 import { DeviceInterface } from "../../interfaces/device.interface";
-import { TOUCH_CONSTANTS } from "../../constants/touch.constants";
+import { TOUCH_CONSTANTS, TOUCH_ERROR_RESPONSE } from "../../constants/touch.constants";
 
 @Injectable()
 export class IosTouch implements DeviceInterface {
@@ -14,8 +14,8 @@ export class IosTouch implements DeviceInterface {
           .then(() => {
             resolve(TOUCH_CONSTANTS.touchAvailable);
           })
-          .catch((error: any) => {
-            reject(error + ' ' + TOUCH_CONSTANTS.touchUnavailable);
+          .catch(() => {
+            reject(TOUCH_ERROR_RESPONSE.TOUCH_UNAVAILABLE);
           });
     });
   }
