@@ -73,6 +73,10 @@ export const TOUCH_ANDROID_ERRORS = {
   GENERIC: {
     key: '',
     value: 'Something went wrong.'
+  },
+  ANDROID_KEY_NOT_FOUND: {
+    key: 8,
+    value: "Android Key Not Found"
   }
 };
 
@@ -111,6 +115,10 @@ export const TOUCH_ERROR_RESPONSE = {
   },
   NO_ENROLLED_FINGERPRINTS: {
     status: 7,
-    value: 'There are no enrolled fingerprints. Fingerprint/Touch ID setting will be disabled.'
+    value: 'There are no enrolled fingerprints to authenticate.'
+  },
+  NO_PRIOR_SETUP: {
+    status: 8,
+    value: 'Touch login has never been initialized. Please log out and log back in to setup touch login.'
   }
 };
