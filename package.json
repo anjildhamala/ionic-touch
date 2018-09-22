@@ -3,9 +3,8 @@
   "version": "0.0.5",
   "description": "A Bridge between touch, storage and login across iOS and android",
   "private": false,
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "author": "Anjil Dhamala",
+  "main": "src/index.js",
   "scripts": {
     "build": "tsc"
   },
@@ -21,9 +20,10 @@
     "cordova-plugin-android-fingerprint-auth": "^1.4.4",
     "cordova-plugin-secure-storage": "^2.6.8",
     "cordova-plugin-touch-id": "^3.3.1",
-    "crypto-js": "^3.1.9-1"
+    "crypto-js": "^3.1.9-1",
+    "ng-packagr": "^4.1.1"
   },
-  "devDependencies": {
+  "peerDependencies": {
     "@angular/common": "^5.2.9",
     "@angular/compiler": "^5.2.9",
     "@angular/compiler-cli": "^5.2.9",

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "declaration": true,
+    "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
@@ -11,8 +11,7 @@
     "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
-    "target": "es5",
-    "outDir": "dist"
+    "target": "es5"
   },
   "include": [
     "src/**/*.ts"
@@ -21,6 +20,9 @@
     "node_modules"
   ],
   "compileOnSave": false,
+  "angularCompilerOptions": {
+    "generateCodeForLibraries": true
+  },
   "atom": {
     "rewriteTsconfig": false
   }
