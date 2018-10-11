@@ -97,10 +97,6 @@ export const TOUCH_ERROR_RESPONSE = {
     status: 3,
     value: 'Touch permission was denied by the device'
   },
-  TOUCH_OFF: {
-    status: 'TouchOff',
-    value: 'Touch Setting is turned off.'
-  },
   GENERIC_ERROR_1: {
     status: 4,
     value: 'Something went wrong with touch login. Please try again later'
@@ -120,5 +116,13 @@ export const TOUCH_ERROR_RESPONSE = {
   NO_PRIOR_SETUP: {
     status: 8,
     value: 'Touch login has never been initialized. Please log out and log back in to setup touch login.'
+  },
+  TOUCH_OFF: {
+    status: 9,
+    value: 'Touch Setting is turned off.'
+  },
+  TOUCH_NOT_SETUP: {
+    status: 10,
+    value: 'Touch Login has not been setup.'
   }
 };

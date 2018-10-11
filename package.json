@@ -6,7 +6,7 @@
   "author": "Anjil Dhamala",
   "main": "src/index.js",
   "scripts": {
-    "build": "tsc"
+    "postinstall": "tsc"
   },
   "repository": {
     "type": "git",
