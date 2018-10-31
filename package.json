@@ -1,6 +1,6 @@
 {
   "name": "ionic-touch-module",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A Bridge between touch, storage and login across iOS and android",
   "private": false,
   "author": "Anjil Dhamala",
