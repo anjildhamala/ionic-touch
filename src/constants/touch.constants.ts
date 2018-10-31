@@ -115,7 +115,7 @@ export const TOUCH_ERROR_RESPONSE = {
   },
   NO_PRIOR_SETUP: {
     status: 8,
-    value: 'Touch login has never been initialized. Please log out and log back in to setup touch login.'
+    value: 'Something went wrong with touch login. Push setting will be reset and will need to be setup again.'
   },
   TOUCH_OFF: {
     status: 9,
