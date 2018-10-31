@@ -2,13 +2,14 @@ import { IosTouch } from "./devices/ios/ios.touch";
 import { AndroidTouch } from "./devices/android/android.touch";
 import { Platform } from "ionic-angular";
 import { Injectable } from "@angular/core";
-import { TOUCH_CONSTANTS} from "./constants/touch.constants";
+import { TOUCH_ANDROID_ERRORS, TOUCH_CONSTANTS, TOUCH_ERROR_RESPONSE } from "./constants/touch.constants";
 import * as CryptoJS from "crypto-js";
 import { WordArray } from "crypto-js";
 import { TouchSecureStorage } from "./storage/touch.storage";
 import { AFAEncryptResponse } from "@ionic-native/android-fingerprint-auth";
 import { Credentials } from "./interfaces/credentials.interface";
 import { ErrorHandler } from "./handlers/error.handler";
+import { TouchError } from "./models/touch.error";
 
 @Injectable()
 export class TouchDriver {
@@ -18,7 +19,7 @@ export class TouchDriver {
     this.isIOS = platform.is('ios');
   }
 
-  isAvailable(): Promise<string> {
+  isAvailable(): Promise<string | TouchError> {
     return this.isIOS ? this.iosTouch.isAvailable() : this.androidTouch.isAvailable();
   }
 

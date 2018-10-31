@@ -9,7 +9,7 @@ export class IosTouch implements DeviceInterface {
   constructor(private touchAuth: TouchID) {
   }
 
-  isAvailable(): Promise<string> {
+  isAvailable(): Promise<string | TouchError> {
     return new Promise((resolve, reject) => {
       this.touchAuth.isAvailable()
           .then(() => {

@@ -2,7 +2,7 @@ import { TOUCH_ANDROID_ERRORS, TOUCH_ERROR_RESPONSE, TOUCH_IOS_ERRORS } from "..
 import { TouchError } from "../models/touch.error";
 
 export class ErrorHandler {
-  static androidErrorHandler(error: any): { status: number, value: string } {
+  static androidErrorHandler(error: any): TouchError {
     switch (error) {
       case TOUCH_ANDROID_ERRORS.FINGERPRINT_ERROR.key:
         return new TouchError(TOUCH_ERROR_RESPONSE.TOUCH_READ_ERROR);

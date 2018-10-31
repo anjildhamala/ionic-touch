@@ -1,5 +1,7 @@
+import { TouchError } from "..";
+
 export interface DeviceInterface {
-  isAvailable(): Promise<string>;
+  isAvailable(): Promise<string | TouchError>;
 
   getTouchSetting(androidClientId?: string, androidToken?: string, iosMessage?: string): Promise<any>;
 

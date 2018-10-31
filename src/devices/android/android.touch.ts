@@ -14,7 +14,7 @@ export class AndroidTouch implements DeviceInterface {
   constructor(private fingerprintAuth: AndroidFingerprintAuth) {
   }
 
-  isAvailable(): Promise<string> {
+  isAvailable(): Promise<string | TouchError> {
     return new Promise((resolve, reject) => {
       this.fingerprintAuth.isAvailable()
           .then((response: AFAAvailableResponse) => {
