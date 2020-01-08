@@ -1,12 +1,11 @@
 import { IosTouch } from "./devices/ios/ios.touch";
 import { AndroidTouch } from "./devices/android/android.touch";
-import { Platform } from "ionic-angular";
 import { Injectable } from "@angular/core";
-import { TOUCH_ANDROID_ERRORS, TOUCH_CONSTANTS, TOUCH_ERROR_RESPONSE } from "./constants/touch.constants";
+import { TOUCH_CONSTANTS } from "./constants/touch.constants";
 import * as CryptoJS from "crypto-js";
 import { WordArray } from "crypto-js";
 import { TouchSecureStorage } from "./storage/touch.storage";
-import { AFAEncryptResponse } from "@ionic-native/android-fingerprint-auth";
+import { AFAEncryptResponse } from "@ionic-native/android-fingerprint-auth/ngx";
 import { Credentials } from "./interfaces/credentials.interface";
 import { ErrorHandler } from "./handlers/error.handler";
 import { TouchError } from "./models/touch.error";
@@ -15,8 +14,15 @@ import { TouchError } from "./models/touch.error";
 export class TouchDriver {
   private isIOS: boolean;
 
-  constructor(private iosTouch: IosTouch, private androidTouch: AndroidTouch, platform: Platform, private storage: TouchSecureStorage) {
-    this.isIOS = platform.is('ios');
+  constructor(private iosTouch: IosTouch, private androidTouch: AndroidTouch, private storage: TouchSecureStorage) {}
+
+  /**
+   * It sets isIOS private property
+   *
+   * @param isIOS Define whether device is IOS or not
+   */
+  init(isIOS: boolean): void {
+    this.isIOS = isIOS;
   }
 
   isAvailable(): Promise<string | TouchError> {
