@@ -4,7 +4,7 @@ import {
   AFADecryptOptions,
   AFAEncryptResponse,
   AndroidFingerprintAuth
-} from "@ionic-native/android-fingerprint-auth";
+} from "@ionic-native/android-fingerprint-auth/ngx";
 import { DeviceInterface } from "../../interfaces/device.interface";
 import { TOUCH_CONSTANTS, TOUCH_ERROR_RESPONSE } from "../../constants/touch.constants";
 import { TouchError } from "../..";
