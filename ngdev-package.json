@@ -1,0 +1,21 @@
+{
+    "$schema": "./node_modules/ng-packagr/package.schema.json",
+    "deleteDestPath": false,
+    "lib": {
+        "entryFile": "public_api.ts",
+        "languageLevel": [
+            "dom",
+            "es2017"
+        ]
+    },
+    "whitelistedNonPeerDependencies": [
+        "@ionic-native/android-fingerprint-auth",
+        "@ionic-native/secure-storage",
+        "@ionic-native/touch-id",
+        "@types/crypto-js",
+        "cordova-plugin-android-fingerprint-auth",
+        "cordova-plugin-secure-storage",
+        "cordova-plugin-touch-id",
+        "crypto-js"
+    ]
+}
