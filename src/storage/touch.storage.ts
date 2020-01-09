@@ -1,8 +1,7 @@
 import { Injectable } from "@angular/core";
 import { SecureStorage, SecureStorageObject } from "@ionic-native/secure-storage";
-import { TOUCH_ANDROID_ERRORS, TOUCH_CONSTANTS, TOUCH_ERROR_RESPONSE } from "../constants/touch.constants";
+import { TOUCH_ANDROID_ERRORS, TOUCH_CONSTANTS } from "../constants/touch.constants";
 import { WordArray } from "crypto-js";
-import { TouchError } from "..";
 
 @Injectable()
 export class TouchSecureStorage {
