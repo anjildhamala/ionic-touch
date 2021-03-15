@@ -1,4 +1,4 @@
-import { TOUCH_ANDROID_ERRORS, TOUCH_ERROR_RESPONSE, TOUCH_IOS_ERRORS } from "..";
+import { TOUCH_ANDROID_ERRORS, TOUCH_ERROR_RESPONSE, TOUCH_IOS_ERRORS } from "../constants/touch.constants";
 import { TouchError } from "../models/touch.error";
 
 export class ErrorHandler {

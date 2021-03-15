@@ -7,7 +7,7 @@ import {
 } from "@ionic-native/android-fingerprint-auth";
 import { DeviceInterface } from "../../interfaces/device.interface";
 import { TOUCH_CONSTANTS, TOUCH_ERROR_RESPONSE } from "../../constants/touch.constants";
-import { TouchError } from "../..";
+import { TouchError } from '../../models/touch.error';
 
 @Injectable()
 export class AndroidTouch implements DeviceInterface {

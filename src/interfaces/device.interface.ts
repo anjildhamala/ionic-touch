@@ -1,4 +1,4 @@
-import { TouchError } from "..";
+import { TouchError } from '../models/touch.error';
 
 export interface DeviceInterface {
   isAvailable(): Promise<string | TouchError>;

@@ -2,7 +2,7 @@ import { IosTouch } from "./devices/ios/ios.touch";
 import { AndroidTouch } from "./devices/android/android.touch";
 import { Platform } from "ionic-angular";
 import { Injectable } from "@angular/core";
-import { TOUCH_ANDROID_ERRORS, TOUCH_CONSTANTS, TOUCH_ERROR_RESPONSE } from "./constants/touch.constants";
+import { TOUCH_CONSTANTS } from "./constants/touch.constants";
 import * as CryptoJS from "crypto-js";
 import { WordArray } from "crypto-js";
 import { TouchSecureStorage } from "./storage/touch.storage";
